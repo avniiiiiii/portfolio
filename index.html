@@ -13,6 +13,23 @@
         margin: 0;
         padding: 0;
       }
+      .animated-text {
+        font-size: 1.2rem; /* Increase from 1rem */
+        font-weight: 400; /* Medium-bold */
+        color: #555; /* Softer contrast instead of pure black */
+        letter-spacing: 0.5px;
+      }
+
+      h1 {
+        font-size: 2.8rem; /* Increase from default 2rem */
+        font-weight: 600;
+      }
+      h2 {
+        font-size: 1.9rem;
+        font-weight: 600;
+        letter-spacing: 0.5px; /* Slightly improves readability */
+      }
+
       .container {
         width: 80%;
         margin: auto;
@@ -108,11 +125,24 @@
       .contact-section a img {
         width: 30px;
       }
+      .contact-section a img {
+        transition: 0.3s ease-in-out;
+      }
+      .contact-section a img:hover {
+        transform: scale(1.2);
+        filter: brightness(1.2);
+      }
+
       .intro {
         opacity: 0;
         transform: translateY(-20px);
         animation: fadeIn 1s ease-in-out forwards;
       }
+      .project-card:hover {
+        transform: scale(1.05);
+        transition: 0.3s ease-in-out;
+      }
+
       @keyframes fadeIn {
         to {
           opacity: 1;
