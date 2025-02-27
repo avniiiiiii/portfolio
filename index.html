@@ -169,19 +169,51 @@
         }
       } */
       @media (max-width: 768px) {
-        .experience-container,
-        .project-container {
+        .experience-container {
           flex-direction: column;
         }
-        .project-card {
-          width: 100%; /* Ensure full width */
-          flex-direction: column; /* Stack image & text */
-          text-align: center;
-        }
-        .project-card img {
-          width: 100%; /* Make images responsive */
+
+        .experience-card {
+          width: 90%; /* Increase width to avoid narrow layout */
+          text-align: left; /* Keep text left-aligned for readability */
+          padding: 20px;
         }
       }
+      @media (max-width: 768px) {
+        .project-container {
+          flex-direction: column;
+          align-items: center;
+          gap: 5px; /* Reduce gap between projects */
+        }
+
+        .project-card {
+          width: 100%; /* Expand to full width */
+          max-width: 400px; /* Set a reasonable max width */
+          display: flex;
+          flex-direction: column; /* Stack content */
+          text-align: center;
+          padding: 10px; /* Reduce padding */
+          margin: 0 auto 10px auto; /* Center and reduce bottom margin */
+        }
+
+        .project-card img {
+          width: 100%; /* Full width images */
+          height: auto; /* Maintain aspect ratio */
+          border-radius: 8px;
+          margin-bottom: 5px; /* Reduce gap between image and text */
+        }
+
+        .project-card .text {
+          padding: 0px 10px; /* Reduce padding */
+          margin-bottom: 5px; /* Reduce gap */
+        }
+
+        .project-card a.button {
+          margin-top: 5px; /* Reduce gap above button */
+          padding: 8px 12px; /* Keep button size balanced */
+        }
+      }
+
       @media (max-width: 768px) {
         .skills-list {
           gap: 20px; /* Reduce from 50px */
