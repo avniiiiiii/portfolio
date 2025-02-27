@@ -168,17 +168,22 @@
           width: 100%;
         }
       } */
+
       @media (max-width: 768px) {
         .experience-container {
           flex-direction: column;
+          align-items: center; /* Centers items properly */
         }
 
         .experience-card {
-          width: 90%; /* Increase width to avoid narrow layout */
-          text-align: left; /* Keep text left-aligned for readability */
-          padding: 20px;
+          width: 100%; /* Full width on mobile */
+          max-width: 90%; /* Prevents too much stretching */
+          text-align: left; /* Keep text aligned properly */
+          padding: 15px; /* Reduce extra padding */
+          margin: 0 auto 10px auto; /* Center the card and reduce bottom margin */
         }
       }
+
       @media (max-width: 768px) {
         .project-container {
           flex-direction: column;
